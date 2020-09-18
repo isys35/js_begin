@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Приветственное сообщение</title>
+</head>
+<body>
+<script>
+    /**
+    *Гибкое приветственное сообщение
+    */
+    function flexibleWelcome() {
+        var welcome = "Добро пожаловать, ";
+        for (i = 0; i < arguments.length; i++) {
+            welcome = welcome + arguments[i] + " ";
+        }
+        return welcome;
+    }
+    document.write(flexibleWelcome("Dzmitry","Bob","Wolt") + "<br>")
+    document.write(flexibleWelcome("Dzm","Bobas","Wolter") + "<br>")
+</script>
+</body>
+</html>

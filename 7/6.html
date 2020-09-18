@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Передача аргументов по значению</title>
+</head>
+<body>
+<script>
+    /**
+    * Инкрементирование двух значений
+    * @param {number} number1
+    * @param {number} number2
+    */
+    function addToMyNumbers(number1, number2) {
+        number1++;
+        number2++;
+        console.log("Значение number1 в функции: " + number1);
+        console.log("Значение number2 в функции: " + number2);
+    }
+    var number1 = 3;
+    var number2 = 12;
+    addToMyNumbers(number1,number2);
+    console.log("Исходное значение number1: " + number1);
+    console.log("Исходное значение number2: " + number2);
+</script>
+</body>
+</html>
