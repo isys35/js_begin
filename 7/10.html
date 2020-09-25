@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Использование самовыполняющейся анонимной функции</title>
+</head>
+<body>
+<script>
+    /**
+    *Использование самовыполняющейся анонимной функции
+    */
+    var myVariable = "Я нахожусь вне функции ";
+    (function () {
+    var myVariable = "Я нахожусь в этой анонимной функции ";
+    document.write(myVariable)
+    }) ();
+    document.write(myVariable)
+</script>
+</body>
+</html>
