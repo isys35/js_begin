@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>использование метода getElementsByTagName()</title>
+    <script>
+        function numberElements(tagName) {
+        var getTags =
+            document.getElementsByTagName(tagName);
+           for (i=0;i<getTags.length; i++) {
+            getTags[i].innerHTML = i+1;
+           }
+        }
+    </script>
+</head>
+<body>
+<h1>Teeeeeexxxxtttt</h1>
+<h1>Teeeeeexxxxtttt</h1>
+<h1>Teeeeeexxxxtttt</h1>
+<h1>Teeeeeexxxxtttt</h1>
+<h1>Teeeeeexxxxtttt</h1>
+<script>
+    numberElements("h1")
+</script>
+</body>
+</html>

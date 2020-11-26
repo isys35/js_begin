@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание кнопки Назад</title>
+    <script src="4.js"></script>
+</head>
+<body>
+<script>
+    var historyLength = getHistoryLength();
+    document.write("<p> Добро пожаловать! Кол-во страниц посещённых  в этом окне: " +
+    historyLength + ".</p>");
+</script>
+<br>
+<a href="javascript:void(0);" onclick="takeMeBack();">Назад</a>
+</body>
+</html>

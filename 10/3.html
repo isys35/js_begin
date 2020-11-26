@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML семейство</title>
+</head>
+<body>
+    <section>
+        <p>Первый</p>
+        <p>Второй</p>
+        <p>Третий</p>
+    </section>
+    <h1>Узлы в элементе section</h1>
+    <script>
+        var myNodeList =
+            document.body.childNodes[1].childNodes;
+        for (i=0; i < myNodeList.length; i++) {
+            document.write(myNodeList[i] + "<br>");
+        }
+    </script>
+</body>
+</html>
