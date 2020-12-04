@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Математическая забава</title>
+    <script src="4.js"></script>
+</head>
+<body onload="registerEvents();">
+<form name="mathWiz">
+    <label>Первое число: <input type="number" name="numberOne"></label>
+    <label>Второе число: <input type="number" name="numberTwo"></label>
+    <label>
+        Оператор:
+        <select name="operator">
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+        </select>
+    </label>
+    <br>
+    <input type="button" name="operate" value="Вычислить"><br>
+    <label>Результат: <input type="number" name="theResult"></label>
+</form>
+</body>
+</html>
