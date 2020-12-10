@@ -1,0 +1,10 @@
+#myText {
+    color: white;
+    background-color: black;
+    font-family: Arial;
+    margin-bottom: 20px;
+}
+#stylesOutput {
+    font-size: 18px;
+    font-family: monospace;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Трансформируемое изображение</title>
+    <script>
+        function swapImage(imgToSwap) {
+            imgToSwap.src = "btn2.jpg";
+            imgToSwap.alt = "Указатель над кнопкой!";
+        }
+        function swapBack(imgToSwap) {
+            imgToSwap.src = "btn1.jpg";
+            imgToSwap.alt = "Наведите на меня указатель!"
+        }
+</script>
+</head>
+<body>
+<img src="btn1.jpg"  onmouseover="swapImage(this);" onmouseout="swapBack(this);" alt="Наведите на меня указатель" width="200px" height="50px">
+<img src="btn1.jpg"  onmouseover="swapImage(this);" onmouseout="swapBack(this);" alt="Наведите на меня указатель" width="200px" height="50px">
+</body>
+</html>
