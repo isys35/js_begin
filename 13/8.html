@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Упарвление анимацией JS + CSS</title>
+    <style>
+        #words {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            padding-top: 20px;
+            font-family: Arial;
+            border-radius: 6px;
+            color: white;
+            animation-name: movewords;
+            animation-duration: 6s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-play-state: running;
+        }
+
+            @keyframes movewords {
+                0% {background: red; left: 100px; top: 0px;}
+                25% {background: blue; left: 200px; top: 100px;}
+                50% {background: blue; left: 300px; top: 200px;}
+                75% {background: blue; left: 200px; top: 200px;}
+                100% {background: red; left: 100px; top: 0px;}
+            }
+
+    </style>
+    <script>
+        window.addEventListener("load",registerEvents,false);
+        function registerEvents(e) {
+            document.getElementById("stop").addEventListener('click', stopAni, false);
+            document.getElementById("go").addEventListener('click', startAni, false);
+        }
+        function stopAni() {
+            document.getElementById('words').style.animationPlayState = "paused";
+        }
+        function startAni() {
+            document.getElementById('words').style.animationPlayState = "running";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="words">Перемещение по странице</h1>
+    <button type="button" id="stop">Пауза</button>
+    <button type="button" id="go">Продолжить</button>
+</body>
+</html>

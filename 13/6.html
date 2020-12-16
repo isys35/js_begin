@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Изменение размера изображения</title>
+    <script>
+        function growImage(imgToGrow) {
+            imgToGrow.width += imgToGrow.width * .05
+            imgToGrow.height += imgToGrow.height * .05
+        }
+        function restoreImage(imgToShrink) {
+            imgToShrink.width = imgToShrink.naturalWidth;
+            imgToShrink.height = imgToShrink.naturalHeight;
+        }
+    </script>
+</head>
+<body>
+<img src="btn1.jpg" id="myButton" onmouseover="growImage(this);"
+     onmouseout="restoreImage(this);" alt="Наведи на меня указатель!">
+</body>
+</html>

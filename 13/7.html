@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Слайд шоу</title>
+    <style>
+        #carousel {
+            position: absolute;
+            width: 800px;
+            height: 400px;
+            top: 100px;
+            left: 100px;
+            display: hidden;
+        }
+    </style>
+    <script>
+        var slides = [
+            "<div id=\"slide1\">Мой 1-ый слайд <br> <img src=\"btn1.jpg\" alt=\"\"></div>",
+            "<div id=\"slide2\">Мой 2-ой слайд <br> <img src=\"btn2.jpg\" alt=\"\"></div>",
+            "<div id=\"slide3\">Мой 3-ий слайд <br> <img src=\"btn1.jpg\" alt=\"\"></div>"
+        ]
+        var currentSlide = 0;
+        var numberOfSlides = slides.length - 1;
+        window.addEventListener("load",loader,false);
+        function loader() {
+            changeImage();
+        }
+        function changeImage() {
+            console.log("changeImage()");
+            if (currentSlide > numberOfSlides) {
+                currentSlide = 0;
+            }
+            document.getElementById('carousel').innerHTML=slides[currentSlide];
+            console.log("Cлайд" + currentSlide);
+            currentSlide ++;
+            setTimeout(changeImage, 1000)
+        }
+    </script>
+</head>
+<body>
+    <div id="carousel"></div>
+</body>
+</html>
