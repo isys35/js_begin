@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск JavaScript</title>
+    <script>
+        window.addEventListener("load", registerEvents, false);
+        function registerEvents(e) {
+            document.getElementById("ask").addEventListener("click",findAnswer, false);
+        }
+        function findAnswer() {
+            var question = document.getElementById("userQuestion").value;
+            var re = new RegExp("JavaScript");
+            if (re.test(question)===true) {
+                document.getElementById("answer").innerHTML = "fdsa f asdfa sd JavaScript dsa sad asd  ffffffffd asd dsaf dsa dsa saf asd sadf";
+                console.log("JavaScript!")
+            }
+        }
+    </script>
+</head>
+<body>
+<form id="userInput">
+    <label>
+        Введите вопрос:
+        <textarea id="userQuestion" cols="30" rows="10"></textarea>
+    </label>
+    <button id="ask" type="button">Получить ответ</button>
+</form>
+<div id="answer"></div>
+</body>
+</html>
