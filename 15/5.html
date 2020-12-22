@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Фабрика функций</title>
+    <script>
+        function createMessageAlert(theMessage) {
+            return function () {
+                alert(theMessage);
+            }
+        }
+        var badEmailError = createMessageAlert("Неизвестный email!");
+        var wrongPasswordError = createMessageAlert("Неправильный пароль!");
+
+        window.addEventListener('load', loader, false);
+        function loader() {
+            document.login.yourEmail.addEventListener("change", badEmailError);
+            document.login.yourPassword.addEventListener("change", wrongPasswordError);
+        }
+    </script>
+</head>
+<body>
+<form action="" name="login" id="loginform">
+    <p>
+        <label>
+            Введите email
+            <input type="text" name="yourEmail">
+        </label>
+    </p>
+    <p>
+        <label>
+            Введите пароль
+            <input type="text" name="yourPassword">
+        </label>
+    </p>
+    <button>Отправить</button>
+</form>
+</body>
+</html>

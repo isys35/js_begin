@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Использование замыканий</title>
+    <script>
+        function greetVisitor(phrase) {
+            var welcome = phrase + ". Рад тебя видеть!";
+            var sayWelcome = function () {
+                document.getElementById('greeting').innerHTML += welcome;
+            }
+            return sayWelcome;
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            var personalGreeting = greetVisitor("Hola Amiga");
+            var anotherGreeting = greetVisitor("Howdy, Friend");
+            document.getElementById("greeting").innerHTML +=
+                "<br> personalGreeting.toString() <br>" + personalGreeting.toString() + "<br>";
+            personalGreeting();
+            document.getElementById("greeting").innerHTML +=
+                "<br> anotherGreeting.toString() <br>" + anotherGreeting.toString() + "<br>";
+            anotherGreeting();
+            personalGreeting();
+        }, false)
+    </script>
+</head>
+<body>
+ <p id="greeting"></p>
+</body>
+</html>
