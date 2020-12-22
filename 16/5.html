@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Отображение JSON-данных</title>
+    <script>
+        window.addEventListener('load',init,false);
+        function init(e) {
+            document.getElementById("myButton").addEventListener('click', documentLoader, false);
+        }
+
+        function reqListener() {
+            var obj = JSON.parse(this.responseText);
+            document.getElementById('book_title').innerHTML = obj.book_title;
+            document.getElementById('book_author').innerHTML = obj.book_author;
+            document.getElementById('summary').innerHTML = obj.summary;
+        }
+        function documentLoader() {
+            var oReq = new XMLHttpRequest();
+            oReq.onload = reqListener;
+            oReq.open("get", "4.json", true);
+            oReq.send();
+        }
+
+    </script>
+</head>
+<body>
+<form action="" id="myForm">
+    <button id="myButton" type="button">
+        Щёлкните для загрузки
+    </button>
+</form>
+<h1>Название книги</h1>
+<div id="book_title"></div>
+<h2>Авторы</h2>
+<div id="book_author"></div>
+<h2>Резюме</h2>
+<div id="summary"></div>
+</body>
+</html>
