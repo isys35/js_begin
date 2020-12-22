@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Проверка адреса электронной почты</title>
+    <script>
+        window.addEventListener('load', loader, false);
+        function loader(e) {
+            e.preventDefault();
+            document.getElementById('emailinput').addEventListener('submit', validateEmail, false)
+        }
+        function validateEmail(e) {
+            var re = /\b[A-Z0-9._%+-]+@[A-Z0-9._]+\.[A-Z]{2,4}\b/i;
+            if (re.test(e.target.yourEmail.value)) {
+                alert("Верно!");
+            } else {
+                alert("Неверно!");
+            }
+        }
+    </script>
+</head>
+<body>
+<form action="" id="emailinput">
+    <label>
+        Введите адрес электронной почты:
+        <input type="text" id="yourEmail">
+    </label>
+    <input type="submit" value="Проверить" id="validate">
+</form>
+</body>
+</html>
