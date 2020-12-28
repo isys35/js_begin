@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery CSS</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sizer").change(function () {
+                $('#theText').css('font-size', Number($('#sizer').val()));
+                 $('#theText').text($('#sizer').val());
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="theText">Привет</div>
+    <form id="controller">
+        <input type="range" id="sizer" min="10" max="100">
+    </form>
+</body>
+</html>
